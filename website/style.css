@@ -1,0 +1,270 @@
+/* general styles */
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--bgColor: #520b18;
+	--mainColor: #f0d43a;
+}
+
+body {
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	position: relative;
+}
+
+@media (max-width: 375px) {
+	body {
+		background-size: cover;
+		height: auto;
+	}
+}
+
+header {
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+	font-weight: 600;
+	font-size: 26px;
+	padding: 20px;
+	text-align: center;
+	background: var(--bgColor);
+	color: var(--mainColor);
+	box-shadow: 0px 0px 8px 1px var(--bgColor);
+}
+
+section {
+	width: 85%;
+	color: var(--mainColor);
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	margin: 5px auto;
+}
+
+@media (max-width: 1024px) {
+	header {
+		width: 100%;
+		min-width: 320px;
+	}
+	section {
+		width: 100%;
+		min-width: 320px;
+	}
+	footer {
+		width: 100%;
+		min-width: 320px;
+	}
+}
+
+.holder {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#entry {
+	display: none;
+	width: 90%;
+	height: 200px;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: #520b1890;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 2px 4px 5px var(--bgColor);
+}
+
+#entryHolder {
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+#fRow {
+	font-size: 28px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#sRow {
+	font-size: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#tRow {
+	font-size: 18px;
+	text-align: center;
+}
+
+@media (max-width: 1024px) {
+	#fRow {
+		font-size: 24px;
+	}
+
+	#sRow {
+		font-size: 18px;
+	}
+
+	#tRow {
+		font-size: 16px;
+	}
+}
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+	width: 100%;
+	display: block;
+	font-size: 27px;
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: var(--bgColor);
+	-o-text-stroke-width: 0.5px;
+	-o-text-stroke-color: var(--bgColor);
+	-ms-text-stroke-width: 0.5px;
+	-ms-text-stroke-color: var(--bgColor);
+	-moz-text-stroke-width: 0.5px;
+	-moz-text-stroke-color: var(--bgColor);
+}
+
+input,
+textarea {
+	display: block;
+	margin: 5px auto;
+	width: 85%;
+	height: 52px;
+	padding-left: 55px;
+	box-shadow: 2px 4px 5px var(--bgColor);
+	border: none;
+	border-radius: 10px;
+	background-color: #520b1890;
+	font-weight: bold;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid var(--bgColor);
+	color: var(--mainColor);
+	outline: none;
+}
+
+#zip {
+	background-image: url(map-marker-alt-solid.svg);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: 10px center;
+	overflow-y: hidden;
+	z-index: 1;
+}
+
+small {
+	width: 50%;
+	font-size: 18px;
+	background: var(--bgColor);
+	color: var(--mainColor);
+	box-shadow: 0px 0px 8px 1px var(--bgColor);
+	text-align: center;
+	transform: translateY(-5px);
+	border-radius: 0px 0px 40px 40px;
+	z-index: -1;
+}
+
+#feelings {
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+button {
+	width: 400px;
+	height: 75px;
+	margin: 10px auto;
+	background: var(--bgColor);
+	color: var(--mainColor);
+	font-size: 26px;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 2px 4px 5px var(--bgColor);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+button:hover::before {
+	content: '> ';
+	color: var(--mainColor);
+	font-size: 26px;
+}
+
+button:hover::after {
+	content: ' <';
+	color: var(--mainColor);
+	font-size: 26px;
+}
+
+@media (max-width: 1024px) {
+	button {
+		width: 40%;
+		height: 50px;
+		font-size: 18px;
+	}
+
+	button:hover::before {
+		content: '';
+	}
+
+	button:hover::after {
+		content: '';
+	}
+}
+/* Style for Placeholder Text*/
+::placeholder {
+	/* Firefox, Chrome, Opera */
+	color: var(--mainColor);
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: var(--mainColor);
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: var(--mainColor);
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	background: var(--bgColor);
+	color: var(--mainColor);
+	box-shadow: 0px 0px 8px 1px var(--bgColor);
+	position: absolute;
+	bottom: 0px;
+}
+
+@media (max-width: 375px) {
+	footer {
+		margin-top: 15px;
+		position: initial;
+		bottom: 0px;
+	}
+}
