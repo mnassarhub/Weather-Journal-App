@@ -77,9 +77,8 @@ document.getElementById('generate').addEventListener('click', async () => {
 				finalData.temp + '&degC';
 			document.getElementById('city').innerHTML = finalData.city;
 			document.getElementById('condition').innerHTML =
-				document.getElementById('date').innerHTML =
-					finalData.newDate;
-			finalData.description;
+				finalData.description;
+			document.getElementById('date').innerHTML = finalData.newDate;
 			document.getElementById('content').innerHTML =
 				finalData.feelings;
 		} catch (er) {

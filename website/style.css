@@ -95,7 +95,6 @@ section {
 	padding-top: 15px;
 }
 
-
 #fRow {
 	font-size: 28px;
 	display: flex;
@@ -127,7 +126,12 @@ section {
 	#tRow {
 		font-size: 16px;
 	}
+
+	#entry {
+		height: max-content;
+	}
 }
+
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label {
 	width: 100%;
@@ -233,6 +237,20 @@ button:hover::after {
 	button:hover::after {
 		content: '';
 	}
+}
+
+img {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.dataStyle {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 /* Style for Placeholder Text*/
 ::placeholder {
